@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <header class="py-16 space-y-8">
+    <h1 class="text-3xl font-bold">
+      <span class="flex flex-wrap gap-x-4">
+        <span>長谷川 駿</span><span class="inline-block">Hayato Hasegawa</span>
+      </span>
+    </h1>
+  </header>
+  <hr />
+  <main class="space-y-16 py-16">
+    <section>
+      <h2 class="text-xl font-bold">書いた記事</h2>
+      <ol class="space-y-8 mt-6">
+        <li>
+          <a href="/blog/2021-08-01-astro-0.21.0-release/"
+            >Astro 0.21.0 リリースノート</a
+          >
+        </li>
+        <li>
+          <a href="/blog/2021-07-01-astro-0.20.0-release/"
+            >Astro 0.20.0 リリースノート</a
+          >
+        </li>
+        <li>
+          <a href="/blog/2021-06-01-astro-0.19.0-release/"
+            >Astro 0.19.0 リリースノート</a
+          >
+        </li>
+      </ol>
+    </section>
+    <hr />
+    <section>
+      <h2 class="text-xl font-bold">長谷川 駿 について</h2>
+      <div class="space-y-8 mt-6">
+        <p>
+          マークアップとアクセシビリティに興味があるフロントエンドエンジニアです。
+        </p>
+        <p><a href="/about/">長谷川 駿 について詳しくはこちら</a></p>
+      </div>
+    </section>
+  </main>
+</Layout>

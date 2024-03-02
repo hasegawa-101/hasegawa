@@ -1,0 +1,47 @@
+---
+import "../styles/style.css";
+
+interface Props {
+  title: string;
+  description: string;
+  isError: boolean;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja" class="focus-within:motion-safe:scroll-smooth [font-kerning:none]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@hasegawa_dev" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/favicon.svg" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="hasegawa.dev" />
+    <meta property="og:locale" content="ja_JP" />
+  </head>
+  <body
+    class="ps-[5%] pe-[5%] min-h-svh bg-stone-100 text-gray-900 dark:text-gray-200 dark:bg-stone-900"
+  >
+    <slot />
+    <hr>
+    <footer class="sticky top-full py-16">
+      <p lang="en"><small>© Hayato Hasegawa</small></p>
+    </footer>
+  </body>
+</html>
