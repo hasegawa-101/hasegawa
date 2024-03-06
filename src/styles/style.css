@@ -16,5 +16,7 @@ h1, h2, h3, h4, h5, h6, p, dt, dd {
 body {
   margin-left: env(safe-area-inset-left);
   margin-right: env(safe-area-inset-right);
+  letter-spacing: 0.12em;
+  line-height: 1.7;
 }
 
