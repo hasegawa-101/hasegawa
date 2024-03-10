@@ -19,6 +19,9 @@ export default {
       fontFamily: {
         sans: ["system-ui", "sans-serif"],
       },
+      borderColor: {
+        DEFAULT: 'rgb(var(--borderColor-DEFAULT) / <alpha-value>)',
+      },
     },
   },
   plugins: [],
