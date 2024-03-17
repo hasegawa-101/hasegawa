@@ -20,7 +20,7 @@ export default {
         sans: ["system-ui", "sans-serif"],
       },
       borderColor: {
-        DEFAULT: 'rgb(var(--borderColor-DEFAULT) / <alpha-value>)',
+        DEFAULT: "rgb(var(--border-color-DEFAULT) / <alpha-value>)",
       },
     },
   },

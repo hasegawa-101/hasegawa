@@ -1,9 +1,11 @@
-  :root {
-    --borderColor-DEFAULT: 230 230 230;
-    @media (prefers-color-scheme: dark) {
-      --borderColor-DEFAULT: 51 51 51;
-    }
+:root {
+  --border-color-DEFAULT: 230 230 230;
+  --sentence-color-DEFAULT: theme("colors.stone.600");
+  @media (prefers-color-scheme: dark) {
+    --border-color-DEFAULT: 51 51 51;
+    --sentence-color-DEFAULT: theme("colors.stone.400");
   }
+}
 
 a,
 button {
@@ -33,4 +35,8 @@ body {
   margin-right: env(safe-area-inset-right);
   letter-spacing: 0.12em;
   line-height: 1.7;
+}
+
+p {
+  color: var(--sentence-color-DEFAULT);
 }
