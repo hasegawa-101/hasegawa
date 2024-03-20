@@ -27,7 +27,7 @@ h6,
 p,
 dt,
 dd {
-  max-inline-size: 42rem;
+  max-inline-size: 42em;
 }
 
 body {
