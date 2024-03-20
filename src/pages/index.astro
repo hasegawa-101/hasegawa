@@ -3,13 +3,13 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="長谷川 駿 Hayato Hasegawa" isTop>
-  <main class="space-y-16 py-16">
+  <main class="space-b-16 pbl-16">
     <section>
       <h2 class="text-xl font-bold">作ったもの</h2>
     </section>
     <section>
       <h2 class="text-xl font-bold">その他、別のプラットフォームに書いた記事</h2>
-      <ol class="space-y-8 mt-16">
+      <ol class="space-b-8 mbs-16">
         <li>
           <a href="https://note.com/hasegawa11y/n/n2ded8745f534"
             >「組織へのアクセシビリティ向上の啓蒙や推進」事例集</a
@@ -30,12 +30,17 @@ import Layout from "@/layouts/Layout.astro";
     <hr />
     <section>
       <h2 class="text-xl font-bold">長谷川 駿について</h2>
-      <div class="space-y-8 mt-16">
+      <div class="space-b-8 mbs-16">
         <p>
           マークアップとウェブアクセシビリティに興味があるフロントエンドエンジニアです。
         </p>
-        <a href="/about/" class="inline-block">長谷川 駿について詳しくはこちら</a>
+        <a href="/about/" class="inline-block hover:text-amber-200">長谷川 駿について詳しくはこちら</a>
       </div>
     </section>
+    <ol class="[counter-reset:count] *:[counter-increment:count] *:marker:[content:'('counter(count)')'] grid  gap-2 grid-flow-col">
+      <li>hoge</li>
+      <li>fuga</li>
+      <li>piyo</li>
+    </ol>
   </main>
 </Layout>

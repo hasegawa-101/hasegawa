@@ -38,15 +38,15 @@ const { title, isTop } = Astro.props;
     <meta property="og:locale" content="ja_JP" />
   </head>
   <body
-    class="ps-[5%] pe-[5%] min-h-svh bg-stone-100 text-stone-700 dark:text-stone-300 dark:bg-stone-800"
+    class="ps-[5%] pe-[5%] [min-block-size:100svb] bg-stone-100 text-stone-700 dark:text-stone-300 dark:bg-stone-800"
   >
     {
       isTop ? (
-        <header class="py-16 space-y-8 border-b">
+        <header class="pbl-16 space-b-8 border-be">
           <h1 class="text-4xl font-bold">Hayato Hasegawa</h1>
         </header>
       ) : (
-        <header class="py-8 space-y-8 border-b">
+        <header class="pbl-8 space-b-8 border-be">
           <a class="font-bold" href="/" title="トップページに戻る">
             Hayato Hasegawa
           </a>
@@ -54,7 +54,7 @@ const { title, isTop } = Astro.props;
       )
     }
     <slot />
-    <footer class="sticky top-full py-8 border-t">
+    <footer class="sticky block-start-full pbl-8 border-bs">
       <p lang="en"><small>©Hayato Hasegawa</small></p>
     </footer>
   </body>
