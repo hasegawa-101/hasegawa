@@ -35,8 +35,29 @@ export default {
           "grid-cols-auto-fit": (value, extra) => ({
             gridTemplateColumns: `repeat(auto-fit, minmax(${value}, 1fr))`,
           }),
-          pbl: (value, extra) => ({
+          pbl: (value) => ({
             paddingBlock: value,
+          }),
+          mbl: (value) => ({
+            marginBlock: value,
+          }),
+          pbi: (value) => ({
+            paddingInline: value,
+          }),
+          mbi: (value) => ({
+            marginInline: value,
+          }),
+          pbs: (value) => ({
+            paddingBlockStart: value,
+          }),
+          pbe: (value) => ({
+            paddingBlockEnd: value,
+          }),
+          pis: (value) => ({
+            paddingInlineStart: value,
+          }),
+          pie: (value) => ({
+            paddingInlineEnd: value,
           }),
           mbs: (value) => ({
             marginBlockStart: value,
