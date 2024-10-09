@@ -26,7 +26,8 @@ h5,
 h6,
 p,
 dt,
-dd {
+dd,
+li {
   max-inline-size: 45em;
 }
 
