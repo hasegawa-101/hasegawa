@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import plugin from "tailwindcss/plugin";
+import typography from "@tailwindcss/typography";
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -26,6 +27,7 @@ export default {
     },
   },
   plugins: [
+    typography,
     plugin(({ matchUtilities, theme, addVariant, addUtilities }) => {
       matchUtilities(
         {
@@ -86,7 +88,7 @@ export default {
             },
           }),
         },
-        { values: theme("spacing") },
+        { values: theme("spacing") }
       );
       addUtilities({
         ".space-b-reverse > :not([hidden]) ~ :not([hidden])": {
@@ -107,7 +109,7 @@ export default {
             borderInlineEndWidth: value,
           }),
         },
-        { values: theme("borderWidth") },
+        { values: theme("borderWidth") }
       );
       matchUtilities(
         {
@@ -124,7 +126,7 @@ export default {
             borderInlineEndWidth: value,
           }),
         },
-        { values: theme("borderWidth") },
+        { values: theme("borderWidth") }
       );
       matchUtilities(
         {
@@ -137,7 +139,7 @@ export default {
         },
         {
           values: theme("inset"),
-        },
+        }
       );
     }),
     plugin(function ({ addVariant, e }) {
@@ -151,7 +153,7 @@ export default {
       addVariant("optional", "&:optional");
       addVariant(
         "group-optional",
-        "@media (any-hover: hover) { &:merge(.group):hover & }",
+        "@media (any-hover: hover) { &:merge(.group):hover & }"
       );
       // peer-hover
 

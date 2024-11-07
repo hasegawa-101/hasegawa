@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+
+const entries = (await getCollection('blog')).toSorted(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<Layout title="ブログ一覧">
+  <main class="space-b-8 pbl-12">
+    <h1 class="text-2xl font-bold">ブログ一覧</h1>
+    <ul>
+    {
+      entries.map((entry) => (
+        <li>
+          <a href=`/blog/${entry.slug}`>
+            {entry.data.title}
+          </a>
+        </li>
+      ))}
+      </ul>
+  </main>
+</Layout>
