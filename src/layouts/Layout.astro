@@ -23,7 +23,7 @@ const { title,description, isTop } = Astro.props;
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title set:html="{title}" />
+    <title set:html={title} />
     {description && <meta name="description" content={description} />}
     <!--<meta name="description" content={description} />-->
     <meta name="twitter:card" content="summary" />
