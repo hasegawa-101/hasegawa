@@ -3,10 +3,11 @@ import "@/styles/style.css";
 
 interface Props {
 	title: string;
+  description?: string | undefined;
 	isTop?: boolean;
 }
 
-const { title, isTop } = Astro.props;
+const { title,description, isTop } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,7 +23,8 @@ const { title, isTop } = Astro.props;
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title set:html="{title}" />
+    {description && <meta name="description" content={description} />}
     <!--<meta name="description" content={description} />-->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@hasegawa_dev" />
@@ -34,7 +36,7 @@ const { title, isTop } = Astro.props;
     <meta property="og:image" content="/favicon.svg" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="hasegawa.dev" />
+    <meta property="og:site_name" content="Hayato Hasegawa" />
     <meta property="og:locale" content="ja_JP" />
   </head>
   <body
