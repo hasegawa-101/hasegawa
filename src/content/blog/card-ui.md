@@ -12,7 +12,7 @@ OpenUIの[Link Area Delegation](https://open-ui.org/components/link-area-delegat
 - subgridを用いて、カードUIのタイトルや説明文の長さがバラついても、高さと位置を揃える
 
 イメージはこちらです。
-![カードUIのイメージ](./assets/card-ui/card-ui.gif)
+![カードUIのイメージ](/images/blog/card-ui/card-ui.gif)
 
 上記要件を満たせるようなカードUIの実装方法について、コードを書いていきます。
 
