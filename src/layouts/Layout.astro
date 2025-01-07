@@ -44,14 +44,24 @@ const { title, description, isTop } = Astro.props;
   >
     {
       isTop ? (
-        <header class="pbl-8 space-b-8 border-be">
+        <header class="pbl-8 space-b-8 border-be flex justify-between items-center">
           <h1 class="text-4xl font-bold">Hayato Hasegawa</h1>
+          <nav>
+            <ul>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </nav>
         </header>
       ) : (
-        <header class="pbl-8 space-b-8 border-be">
+        <header class="pbl-8 space-b-8 border-be flex justify-between items-center">
           <a class="font-bold" href="/" title="トップページに戻る">
             Hayato Hasegawa
           </a>
+          <nav>
+            <ul>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </nav>
         </header>
       )
     }
