@@ -25,7 +25,7 @@ jobs:
         with:
           # path: . # リポジトリ内のAstroプロジェクトのルートロケーション。(オプション)
           node-version: 20 # サイト構築に使用するNodeのバージョン。デフォルトは18です。（オプション）
-          package-manager: pnpm@latest
+          package-manager: bun@latest
 
   deploy:
     needs: build
