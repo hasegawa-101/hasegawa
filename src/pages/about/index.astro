@@ -1,29 +1,70 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+
+// 誕生日から年齢を計算する関数
+const calculateAge = (birthDate: Date): number => {
+	const today = new Date();
+	const yearDiff = today.getFullYear() - birthDate.getFullYear();
+	const monthDiff = today.getMonth() - birthDate.getMonth();
+	const dayDiff = today.getDate() - birthDate.getDate();
+
+	// 誕生日がまだ来ていない場合は年齢を1減らす
+	const hasHadBirthdayThisYear =
+		monthDiff > 0 || (monthDiff === 0 && dayDiff >= 0);
+
+	return hasHadBirthdayThisYear ? yearDiff : yearDiff - 1;
+};
+
+const birthDate = new Date(1997, 11, 25); // 月は0から始まるので12月は11
+const age = calculateAge(birthDate);
 ---
 
 <Layout title="長谷川 駿 について">
-  <main class="pbl-16">
+  <main class="pbl-12">
     <div class="space-b-8">
       <h1 class="text-2xl font-bold">長谷川 駿について</h1>
       <p>
-        はせがわはやと、と読みます。「はせがわ」と呼ばれることが多いので、「はせがわ」という名前で活動しています。
+        はせがわ はやと、と読みます。「はせがわ」と呼ばれることが多いので、「はせがわ」という名前で活動しています。
       </p>
     </div>
     <div class="border-t mbs-12"></div>
     <section class="space-b-8 pbl-12">
+      <h2 class="text-xl font-bold">プロフィール</h2>
+      <dl class="space-b-8">
+        <div>
+          <dt class="text-lg font-bold">年齢</dt>
+          <dd>{`${age}歳`}</dd>
+        </div>
+        <div>
+          <dt class="text-lg font-bold">学歴</dt>
+          <dd>高卒</dd>
+        </div>
+      </dl>
+    </section>
+    <div class="border-t"></div>
+    <section class="space-b-8 pbl-12">
       <h2 class="text-xl font-bold">略歴</h2>
       <dl class="space-b-8">
-        <div class="">
+        <div>
+          <dt class="text-lg font-bold">
+            <time datetime="2025-02">2025年2月</time>
+            - 現在
+          </dt>
+          <dd>
+            エンタメ系のプロダクトを持つ会社の開発部署にて、フロントエンドエンジニアとして従事。デザインシステム作り、など。
+          </dd>
+        </div>
+        <div>
           <dt class="text-lg font-bold">
             <time datetime="2021-08">2021年8月</time>
-            - 現在
+            -
+            <time datetime="2024-11">2024年11月</time>
           </dt>
           <dd>
             福岡県の制作会社に入社し、フロントエンドエンジニアとして従事。JAMStackウェブサイトの構築や、ウェブアプリケーションの構築を担当。
           </dd>
         </div>
-        <div class="">
+        <div>
           <dt class="text-lg font-bold">
             <time datetime="2020-08">2020年8月</time>
             -
@@ -33,14 +74,14 @@ import Layout from "@/layouts/Layout.astro";
             広島県のウェブ制作会社に入社し、ワードプレスを用いたウェブサイト制作のコーディングを担当。マークアップやウェブアクセシビリティに関心を持つ。
           </dd>
         </div>
-        <div class="">
+        <div>
           <dt class="text-lg font-bold">
             <time datetime="2019-10">2019年10月</time>
             -
             <time datetime="2020-04">2020年4月</time>
           </dt>
           <dd>
-            職業訓練校にてウェブデザインを学ぶ。デザイナーを志したが、まずは作ることから始めようと思い、コーディングに熱中する。
+            職業訓練校にてウェブデザインを学ぶ。デザイナーを志したが、まずは作ることから始めようと思い、コーダーとして活動を始める。
           </dd>
         </div>
       </dl>
@@ -51,23 +92,22 @@ import Layout from "@/layouts/Layout.astro";
       <ul class="list-disc pis-4">
         <li>セマンティックなマークアップを心がける</li>
         <li>
-          <a href="https://defensivecss.dev/" target="_blank">Defensive CSS</a>
+          <a href="https://defensivecss.dev/" target="_blank" rel="noopener">Defensive CSS</a>
+        </li>
+        <li>
+          <a href="https://agilemanifesto.org/iso/ja/manifesto.html" target="_blank" rel="noopener">アジャイルソフトウェア開発宣言</a>
         </li>
       </ul>
     </section>
     <div class="border-t"></div>
     <section class="space-b-8 pbl-12">
-      <h2 class="text-xl font-bold">やりたいこと</h2>
-    </section>
-    <div class="border-t"></div>
-    <section class="space-b-8 pbl-12">
-      <h2 class="text-xl font-bold">使ったことのある技術・ツールなど</h2>
+      <h2 class="text-xl font-bold">使ったことのある技術</h2>
       <ul class="list-disc pis-4">
-        <li>HTML</li>
-        <li>CSS</li>
+        <li>HTML / EJS / Pug</li>
+        <li>CSS / SCSS / Tailwind CSS / CSS Modules</li>
         <li>JavaScript / TypeScript</li>
-        <li>React / Next.js</li>
-        <li>SWR</li>
+        <li>React / Next.js / React Router</li>
+        <li>Node.js / Nest.js / Hono</li>
       </ul>
     </section>
     <div class="border-t"></div>
@@ -125,7 +165,7 @@ import Layout from "@/layouts/Layout.astro";
       <h2 class="text-xl font-bold">SNSなど</h2>
       <ul class="list-disc pis-4">
         <li>
-          <a href="https://twitter.com/hasegawa_dev" target="_blank">Twitter</a>
+          <a href="https://x.com/hasegawa_dev" target="_blank">X</a>
         </li>
         <li>
           <a href="https://github.com/hasegawa-101" target="_blank">Github</a>

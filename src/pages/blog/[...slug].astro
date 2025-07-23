@@ -17,7 +17,13 @@ const { Content } = await entry.render();
   <main class="space-b-8 pbl-12">
     <div class="space-y-2">
       <h1 class="text-2xl font-bold">{entry.data.title}</h1>
-      <p class="text-sm text-gray-500">{`公開日: ${entry.data.date.toLocaleDateString()}`}</p>
+      <p class="text-sm text-gray-600">{`公開日: ${entry.data.date.toLocaleDateString("ja-JP", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      })
+        .split("/")
+        .join("-")}`}</p>
     </div>
     <div class="prose dark:prose-invert">
       <Content/>

@@ -10,9 +10,9 @@ const sortedEntries = [...entries].sort((a, b) => {
 ---
 
 <Layout title="ブログ一覧">
-  <main class="space-b-8 pbl-12 prose dark:prose-invert">
+  <main class="space-b-8 pbl-12">
     <h1 class="text-2xl font-bold">ブログ一覧</h1>
-    <ul>
+    <ul class="list-disc pis-4">
     {
       sortedEntries.map((entry) => (
         <li>
