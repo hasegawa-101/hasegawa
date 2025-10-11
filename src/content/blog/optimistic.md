@@ -72,7 +72,7 @@ export const Like: FC<Props> = ({ isLiked }) => {
 	const { likeAction, optimisticLike } = useLike({ isLiked });
 
 	return (
-		<form action={formAction}>
+		<form action={likeAction}>
 			<button type="submit">
 				{optimisticLike ? "いいね済み" : "いいねする"}
 			</button>
