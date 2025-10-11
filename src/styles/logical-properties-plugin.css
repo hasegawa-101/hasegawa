@@ -1,0 +1,135 @@
+/* Padding Block/Inline */
+@utility pbl-* {
+	padding-block: calc(var(--spacing) * --value(integer));
+}
+@utility mbl-* {
+	margin-block: calc(var(--spacing) * --value(integer));
+}
+@utility pbi-* {
+	padding-inline: calc(var(--spacing) * --value(integer));
+}
+@utility mbi-* {
+	margin-inline: calc(var(--spacing) * --value(integer));
+}
+
+/* Padding Block Start/End */
+@utility pbs-* {
+	padding-block-start: calc(var(--spacing) * --value(integer));
+}
+@utility pbe-* {
+	padding-block-end: calc(var(--spacing) * --value(integer));
+}
+@utility pis-* {
+	padding-inline-start: calc(var(--spacing) * --value(integer));
+}
+@utility pie-* {
+	padding-inline-end: calc(var(--spacing) * --value(integer));
+}
+
+/* Margin Block Start/End */
+@utility mbs-* {
+	margin-block-start: calc(var(--spacing) * --value(integer));
+}
+@utility mbe-* {
+	margin-block-end: calc(var(--spacing) * --value(integer));
+}
+@utility mis-* {
+	margin-inline-start: calc(var(--spacing) * --value(integer));
+}
+@utility mie-* {
+	margin-inline-end: calc(var(--spacing) * --value(integer));
+}
+
+/* Space utilities */
+@utility space-b-* {
+	& > :not([hidden]) ~ :not([hidden]) {
+		--tw-space-b-reverse: 0;
+		margin-block-start: calc(calc(var(--spacing) * --value(integer)) * calc(1 - var(--tw-space-b-reverse)));
+		margin-block-end: calc(calc(var(--spacing) * --value(integer)) * var(--tw-space-b-reverse));
+	}
+}
+
+@utility space-i-* {
+	& > :not([hidden]) ~ :not([hidden]) {
+		--tw-space-i-reverse: 0;
+		margin-inline-start: calc(calc(var(--spacing) * --value(integer)) * calc(1 - var(--tw-space-i-reverse)));
+		margin-inline-end: calc(calc(var(--spacing) * --value(integer)) * var(--tw-space-i-reverse));
+	}
+}
+
+@layer utilities {
+	.space-b-reverse > :not([hidden]) ~ :not([hidden]) {
+		--tw-space-b-reverse: 1;
+	}
+
+	.space-i-reverse > :not([hidden]) ~ :not([hidden]) {
+		--tw-space-i-reverse: 1;
+	}
+}
+
+/* Border Block/Inline */
+@utility border-lb-* {
+	border-block-start-width: --value(integer)px;
+	border-block-end-width: --value(integer)px;
+}
+@utility border-li-* {
+	border-inline-start-width: --value(integer)px;
+	border-inline-end-width: --value(integer)px;
+}
+
+/* Border Block/Inline Start/End */
+@utility border-bs-* {
+	border-block-start-width: --value(integer)px;
+}
+@utility border-be-* {
+	border-block-end-width: --value(integer)px;
+}
+@utility border-is-* {
+	border-inline-start-width: --value(integer)px;
+}
+@utility border-ie-* {
+	border-inline-end-width: --value(integer)px;
+}
+
+/* Border utilities without width value (default 1px) */
+@layer utilities {
+	.border-be {
+		border-block-end-style: solid;
+		border-block-end-width: 1px;
+		border-block-end-color: var(--color-border-DEFAULT);
+	}
+	.border-bs {
+		border-block-start-style: solid;
+		border-block-start-width: 1px;
+		border-block-start-color: var(--color-border-DEFAULT);
+	}
+}
+
+/* Inset Block Start/End */
+@utility block-start-* {
+	inset-block-start: *;
+}
+@utility block-end-* {
+	inset-block-end: *;
+}
+
+/* Static utilities for keyword values */
+@layer utilities {
+	.block-start-full {
+		inset-block-start: 100%;
+	}
+	.block-end-full {
+		inset-block-end: 100%;
+	}
+}
+
+/* Grid auto-fill/fit */
+@utility grid-cols-auto-fill-* {
+	grid-template-columns: repeat(auto-fill, minmax(calc(var(--spacing) * --value(integer)), 1fr));
+}
+@utility grid-cols-auto-fit-* {
+	grid-template-columns: repeat(auto-fit, minmax(calc(var(--spacing) * --value(integer)), 1fr));
+}
+
+/* Custom hover variant respecting user preferences */
+/* Note: Tailwind v4's default hover already respects user preferences */
