@@ -14,20 +14,25 @@ const { Content } = await entry.render();
 ---
 
 <Layout title={entry.data.title} description={entry.data.description}>
-  <div class="space-b-12 pbl-12">
-    <div class="space-y-2">
-      <h1 class="text-2xl font-bold">{entry.data.title}</h1>
-      <p class="text-sm text-gray-600">{`公開日: ${entry.data.date.toLocaleDateString("ja-JP", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      })
-        .split("/")
-        .join("-")}`}</p>
-    </div>
-    <hr>
-    <div class="prose dark:prose-invert">
-      <Content/>
-    </div>
-  </div>
+	<div class="space-b-12 pbl-12">
+		<div class="space-y-2">
+			<h1 class="text-2xl font-bold">{entry.data.title}</h1>
+			<p class="text-sm text-gray-600">
+				{
+					`公開日: ${entry.data.date
+						.toLocaleDateString("ja-JP", {
+							year: "numeric",
+							month: "2-digit",
+							day: "2-digit",
+						})
+						.split("/")
+						.join("-")}`
+				}
+			</p>
+		</div>
+		<hr />
+		<div class="prose dark:prose-invert">
+			<Content />
+		</div>
+	</div>
 </Layout>

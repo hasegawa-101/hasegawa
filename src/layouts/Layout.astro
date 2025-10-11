@@ -12,66 +12,74 @@ const { title, description, isTop } = Astro.props;
 
 <!doctype html>
 <html
-  lang="ja"
-  class="focus-within:motion-safe:scroll-smooth [font-kerning:none]"
+	lang="ja"
+	class="focus-within:motion-safe:scroll-smooth [font-kerning:none]"
 >
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title set:html={title} />
-    {description && <meta name="description" content={description} />}
-    <!--<meta name="description" content={description} />-->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@hasegawa_dev" />
-    <meta name="twitter:title" content={title} />
-    <!--<meta name="twitter:description" content={description} />-->
-    <meta name="twitter:image" content="/favicon.svg" />
-    <meta property="og:title" content={title} />
-    <!--<meta property="og:description" content={description} />-->
-    <meta property="og:image" content="/favicon.svg" />
-    <meta property="og:url" content={Astro.url} />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Hayato Hasegawa" />
-    <meta property="og:locale" content="ja_JP" />
-  </head>
-  <body
-    class="ps-[5%] pe-[5%] [min-block-size:100svb] bg-stone-100 text-stone-700 dark:text-stone-300 dark:bg-stone-800"
-  >
-    {
-      isTop ? (
-        <header class="pbl-8 border-be flex justify-between items-center max-w-2xl mx-auto">
-          <h1 class="font-bold">Hayato Hasegawa</h1>
-          <nav>
-            <ul class="grid grid-flow-col gap-4">
-              <li><a href="/about">About</a></li>
-              <li><a href="/blogs">Blogs</a></li>
-            </ul>
-          </nav>
-        </header>
-      ) : (
-        <header class="pbl-8 border-be flex justify-between items-center max-w-2xl mx-auto">
-          <a class="font-bold" href="/" title="トップページに戻る">
-            Hayato Hasegawa
-          </a>
-          <nav>
-            <ul class="grid grid-flow-col gap-4">
-              <li><a href="/about">About</a></li>
-              <li><a href="/blogs">Blog</a></li>
-            </ul>
-          </nav>
-        </header>
-      )
-    }
-    <main class="max-w-2xl mx-auto">
-      <slot />
-    </main>
-    <footer class="sticky block-start-full pbl-8 border-bs max-w-2xl mx-auto">
-      <p lang="en"><small>©Hayato Hasegawa</small></p>
-    </footer>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title set:html={title} />
+		{description && <meta name="description" content={description} />}
+		<!--<meta name="description" content={description} />-->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@hasegawa_dev" />
+		<meta name="twitter:title" content={title} />
+		<!--<meta name="twitter:description" content={description} />-->
+		<meta name="twitter:image" content="/favicon.svg" />
+		<meta property="og:title" content={title} />
+		<!--<meta property="og:description" content={description} />-->
+		<meta property="og:image" content="/favicon.svg" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Hayato Hasegawa" />
+		<meta property="og:locale" content="ja_JP" />
+	</head>
+	<body
+		class="ps-[5%] pe-[5%] [min-block-size:100svb] bg-stone-100 text-stone-700 dark:text-stone-300 dark:bg-stone-800"
+	>
+		{
+			isTop ? (
+				<header class="pbl-8 border-be flex justify-between items-center max-w-2xl mx-auto">
+					<h1 class="font-bold">Hayato Hasegawa</h1>
+					<nav>
+						<ul class="grid grid-flow-col gap-4">
+							<li>
+								<a href="/about">About</a>
+							</li>
+							<li>
+								<a href="/blogs">Blogs</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+			) : (
+				<header class="pbl-8 border-be flex justify-between items-center max-w-2xl mx-auto">
+					<a class="font-bold" href="/" title="トップページに戻る">
+						Hayato Hasegawa
+					</a>
+					<nav>
+						<ul class="grid grid-flow-col gap-4">
+							<li>
+								<a href="/about">About</a>
+							</li>
+							<li>
+								<a href="/blogs">Blogs</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+			)
+		}
+		<main class="max-w-2xl mx-auto">
+			<slot />
+		</main>
+		<footer class="sticky block-start-full pbl-8 border-bs max-w-2xl mx-auto">
+			<p lang="en"><small>©Hayato Hasegawa</small></p>
+		</footer>
+	</body>
 </html>

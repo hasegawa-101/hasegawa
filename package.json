@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "biome check --write ./src",
-    "format": "biome format --write ./src"
+    "format": "biome format --write ./src && prettier --write \"src/**/*.astro\"",
+    "format:astro": "prettier --write \"src/**/*.astro\""
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -23,10 +24,12 @@
   },
   "devDependencies": {
     "@astrojs/language-server": "^2.15.4",
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.2.5",
     "@tailwindcss/typography": "^0.5.15",
     "@types/markdown-it": "14.1.2",
     "@types/sanitize-html": "2.13.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.6.3"
   }
 }

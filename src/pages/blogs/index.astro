@@ -9,18 +9,17 @@ const sortedEntries = [...entries].sort((a, b) => {
 });
 ---
 
-<Layout title="ブログ一覧">
-  <div class="space-b-8 pbl-12">
-    <h1 class="text-2xl font-bold">ブログ一覧</h1>
-    <ul class="space-b-4 mbs-12">
-    {
-      sortedEntries.map((entry) => (
-        <li>
-          <a href=`/blogs/${entry.slug}`>
-            {entry.data.title}
-          </a>
-        </li>
-      ))}
-      </ul>
-  </div>
+<Layout title="Blogs">
+	<div class="space-b-8 pbl-12">
+		<h1 class="text-2xl font-bold">Blogs</h1>
+		<ul class="space-b-4 mbs-12">
+			{
+				sortedEntries.map((entry) => (
+					<li>
+						<a href={`/blogs/${entry.slug}`}>{entry.data.title}</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
 </Layout>
