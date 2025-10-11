@@ -10,17 +10,17 @@ const sortedEntries = [...entries].sort((a, b) => {
 ---
 
 <Layout title="ブログ一覧">
-  <main class="space-b-8 pbl-12">
+  <div class="space-b-8 pbl-12">
     <h1 class="text-2xl font-bold">ブログ一覧</h1>
-    <ul class="list-disc pis-4">
+    <ul class="space-b-4 mbs-12">
     {
       sortedEntries.map((entry) => (
         <li>
-          <a href=`/blog/${entry.slug}`>
+          <a href=`/blogs/${entry.slug}`>
             {entry.data.title}
           </a>
         </li>
       ))}
       </ul>
-  </main>
+  </div>
 </Layout>
