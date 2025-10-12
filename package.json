@@ -12,24 +12,23 @@
     "format": "biome format --write ./src && prettier --write \"src/**/*.astro\"",
     "format:astro": "prettier --write \"src/**/*.astro\""
   },
-  "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "4.3.0",
-    "@astrojs/rss": "4.0.12",
-    "astro": "5.11.1",
-    "markdown-it": "14.1.0",
-    "sanitize-html": "2.14.0",
-    "tailwindcss": "^4.1.14"
-  },
   "devDependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/language-server": "^2.15.4",
+    "@astrojs/mdx": "^4.3.7",
+    "@astrojs/rss": "4.0.12",
     "@biomejs/biome": "^2.2.5",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.14",
     "@types/markdown-it": "14.1.2",
-    "@types/sanitize-html": "2.13.0",
+    "@types/sanitize-html": "^2.16.0",
+    "astro": "^5.14.4",
+    "markdown-it": "14.1.0",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.6.3"
+    "sanitize-html": "^2.17.0",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3",
+    "vite": "^6.3.6"
   }
 }
