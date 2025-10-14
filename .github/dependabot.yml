@@ -1,0 +1,58 @@
+version: 2
+updates:
+  # npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "npm"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    versioning-strategy: "increase-if-necessary"
+    # グループ化設定
+    groups:
+      # Astro関連をまとめる
+      astro:
+        patterns:
+          - "astro*"
+          - "@astrojs/*"
+      # Tailwind関連をまとめる
+      tailwind:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+      # 開発ツールをまとめる
+      dev-tools:
+        patterns:
+          - "@biomejs/*"
+          - "prettier*"
+          - "typescript"
+          - "vite"
+      # TypeScript型定義をまとめる
+      types:
+        patterns:
+          - "@types/*"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "chore(ci)"
+    # セキュリティ向上のため、コミットSHA固定を検討する場合は
+    # Dependabotが自動的にSHA + コメント形式で更新してくれます
+    # 例: actions/checkout@abc123... # v5.0.0
