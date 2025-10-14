@@ -49,7 +49,7 @@
 
 ### 必要な環境
 
-- [Bun](https://bun.sh/) (最新版)
+- [Bun](https://bun.sh/) v1.2.4（`.bun-version`で管理）
 
 ### セットアップ
 
