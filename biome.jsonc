@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**", "!**/src/styles/style.css"]
+		"includes": ["**", "!**/src/styles/style.css", "!**/src/styles/logical-properties-plugin.css"]
 	},
 	"formatter": {
 		"enabled": true,
@@ -17,7 +17,10 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"suspicious": {
+				"noUnknownAtRules": "off"
+			}
 		}
 	},
 	"javascript": {
