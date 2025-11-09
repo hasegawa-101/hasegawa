@@ -19,6 +19,9 @@
 	--font-family-gothic-medium: "MFW-PIshiiGothicStdN-M", sans-serif;
 	--font-family-gothic-bold: "MFW-PIshiiGothicStdN-B", sans-serif;
 
+	/* Default font family */
+	--font-family-sans: "MFW-PIshiiGothicStdN-R", sans-serif;
+
 	--letter-spacing-body: 0.12em;
 
 	--line-height-body: 1.7;
