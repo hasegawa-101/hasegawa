@@ -15,6 +15,9 @@ updates:
       prefix: "chore(deps)"
       include: "scope"
     versioning-strategy: "increase-if-necessary"
+    # 特定のパッケージを無視
+    ignore:
+      - dependency-name: "vite"
     # グループ化設定
     groups:
       # Astro関連をまとめる
