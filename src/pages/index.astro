@@ -1,17 +1,46 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const entries = await getCollection("blog");
+
+const latestEntries = [...entries]
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+	.slice(0, 5);
 ---
 
 <Layout title="長谷川 駿 Hayato Hasegawa" isTop>
 	<div class="space-b-12 pbl-12">
-		<section>
-			<h2 class="text-xl">作ったもの</h2>
-			<p class="mbs-12">今後掲載予定...</p>
+		<section class="space-b-8">
+			<h2 class="text-xl">Hayato Hasegawaについて</h2>
+			<div class="space-b-4">
+				<p>デザインにも強い関心があるフロントエンドエンジニアです。</p>
+				<a href="/about/" class="inline-block">Hayato Hasegawaについて</a>
+			</div>
 		</section>
-    <div class="border-be"></div>
-		<section>
+		<div class="border-be"></div>
+		<section class="space-b-8">
+			<h2 class="text-xl">最近書いたブログ</h2>
+			<ol class="space-b-4">
+				{
+					latestEntries.map((entry) => (
+						<li>
+							<a href={`/blogs/${entry.slug}`}>{entry.data.title}</a>
+						</li>
+					))
+				}
+			</ol>
+			<a href="/blogs/" class="inline-block">すべてのブログ記事を見る</a>
+		</section>
+		<div class="border-be"></div>
+		<section class="space-b-8">
+			<h2 class="text-xl">作ったもの</h2>
+			<p class="">今後掲載予定...</p>
+		</section>
+		<div class="border-be"></div>
+		<section class="space-b-8">
 			<h2 class="text-xl">別のプラットフォームに書いた記事</h2>
-			<ul class="space-b-4 mbs-12">
+			<ul class="space-b-4">
 				<li>
 					<a href="https://note.com/_hasegawa_/n/n2ded8745f534">
 						「組織へのアクセシビリティ向上の啓蒙や推進」事例集
@@ -28,14 +57,6 @@ import Layout from "@/layouts/Layout.astro";
 					</a>
 				</li>
 			</ul>
-		</section>
-    <div class="border-be"></div>
-		<section>
-			<h2 class="text-xl">長谷川 駿について</h2>
-			<div class="space-b-8 mbs-12">
-				<p>デザインにも強い関心があるフロントエンドエンジニアです。</p>
-				<a href="/about/" class="inline-block">長谷川 駿について</a>
-			</div>
 		</section>
 	</div>
 </Layout>
