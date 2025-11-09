@@ -11,10 +11,7 @@ const { title, description, isTop } = Astro.props;
 ---
 
 <!doctype html>
-<html
-	lang="ja"
-	class="focus-within:motion-safe:scroll-smooth [font-kerning:none]"
->
+<html lang="ja" class="focus-within:motion-safe:scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta
@@ -22,6 +19,10 @@ const { title, description, isTop } = Astro.props;
 			content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 		/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="stylesheet"
+			href="https://morisawafonts.net/c/01K9MNT1PP7ZFFDRMH1SWJXF95/mf.css"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title set:html={title} />
 		{description && <meta name="description" content={description} />}
