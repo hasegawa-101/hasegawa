@@ -47,6 +47,19 @@ body {
     hyphens: auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+dt {
+    font-family: var(--font-family-gothic-bold);
+    font-weight: normal;
+}
+
 a,
 button {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
