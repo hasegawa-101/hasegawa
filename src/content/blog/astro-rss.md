@@ -30,7 +30,7 @@ FeedlyなどのRSSリーダーを使用している身では、全文表示さ�
 
 全文表示のやり方も公式ドキュメントにあるので、そちらを参考にしています。
 
-(記事の全文を含める)[https://docs.astro.build/ja/recipes/rss/#%E8%A8%98%E4%BA%8B%E3%81%AE%E5%85%A8%E6%96%87%E3%82%92%E5%90%AB%E3%82%81%E3%82%8B]
+<a href="https://docs.astro.build/en/recipes/rss/#including-full-post-content" target="_blank">Including full post content | Add an RSS feed</a>
 
 ## 今後について
 
