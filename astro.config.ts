@@ -5,7 +5,12 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: "https://hayatohasegawa.com",
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => page !== "https://hayatohasegawa.com/cv/",
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
