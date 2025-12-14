@@ -3,7 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout title="職務経歴書 - 長谷川 駿" hideHeaderFooter noindex>
-	<article class="py-32 max-w-none prose dark:prose-invert prose-headings:leading-none prose-headings:font-norma prose-headings:leading-none prose-p:my-3 prose-ul:my-3 prose-li:my-0 prose-dt:mt-3 prose-dt:leading-none">
+	<article class="py-32 max-w-none prose dark:prose-invert prose-headings:leading-none prose-headings:font-normal prose-headings:leading-none prose-p:my-3 prose-ul:my-3 prose-li:my-0 prose-dt:mt-3 prose-dt:leading-none">
 		<header>
 			<h1 class="text-center">職務経歴書</h1>
 			<p class="text-end"><time datetime="2025-12-15">2025年12月15日</time></p>
@@ -31,8 +31,10 @@ import Layout from '@/layouts/Layout.astro';
 			<h2>職務経歴詳細</h2>
 
 			<section>
-				<h3>株式会社ANYLAND</h3>
-				<p>2025年2月 〜 2025年10月末</p>
+				<div class="flex items-baseline gap-3 mb-4">
+					<h3 class="my-0">株式会社ANYLAND</h3>
+					<p class="my-0">2025年2月 〜 2025年10月末</p>
+				</div>
 
 				<article>
 					<h4>営業職向け AI SaaS 開発（会社都合により中止）</h4>
@@ -141,8 +143,10 @@ import Layout from '@/layouts/Layout.astro';
 			<hr />
 
 			<section>
-				<h3>イチマルイチデザイン株式会社</h3>
-				<p>2021年8月 〜 2024年11月末</p>
+				<div class="flex items-baseline gap-3 mb-4">
+					<h3 class="my-0">イチマルイチデザイン株式会社</h3>
+					<p class="my-0">2021年8月 〜 2024年11月末</p>
+				</div>
 
 				<article>
 					<h4>バスケットボールスタッツ記録ウェブサービス開発</h4>
@@ -176,9 +180,7 @@ import Layout from '@/layouts/Layout.astro';
 					<p>フロントエンドエンジニア 、リーダー</p>
 
 					<h5>対応したこと</h5>
-					<ul>
-						<li>技術選定、設計、実装、タスク振り分け、コードレビュー、デザインレビュー</li>
-					</ul>
+						<p>技術選定、設計、実装、タスク振り分け、コードレビュー、デザインレビュー</p>
 				</article>
 
 				<hr />
@@ -201,9 +203,7 @@ import Layout from '@/layouts/Layout.astro';
 					<p>開発リーダー</p>
 
 					<h5>対応したこと</h5>
-					<ul>
-						<li>技術選定、設計、実装</li>
-					</ul>
+						<p>技術選定、設計、実装</p>
 				</article>
 
 				<hr />
@@ -253,9 +253,7 @@ import Layout from '@/layouts/Layout.astro';
 					<p>フロントエンドエンジニア、メンバー</p>
 
 					<h5>対応したこと</h5>
-					<ul>
-						<li>フロントエンド実装、バックエンドAPI実装、コードレビュー</li>
-					</ul>
+						<p>フロントエンド実装、バックエンドAPI実装、コードレビュー</p>
 				</article>
 
 				<hr />
@@ -291,9 +289,7 @@ import Layout from '@/layouts/Layout.astro';
 					<p>フロントエンドエンジニア、メンバー</p>
 
 					<h5>対応したこと</h5>
-					<ul>
-						<li>フロントエンド実装、バックエンドAPI実装、コードレビュー</li>
-					</ul>
+						<p>フロントエンド実装、バックエンドAPI実装、コードレビュー</p>
 				</article>
 
 				<hr />
@@ -316,9 +312,7 @@ import Layout from '@/layouts/Layout.astro';
 					</dl>
 
 					<h5>対応したこと</h5>
-					<ul>
-						<li>技術選定、設計、実装</li>
-					</ul>
+						<p>技術選定、設計、実装</p>
 				</article>
 
 				<hr />
@@ -333,7 +327,6 @@ import Layout from '@/layouts/Layout.astro';
 
 			<section>
 				<h3>株式会社織</h3>
-				<p><a href="http://shikiori.com/">http://shikiori.com/</a></p>
 				
 				<h4>WordPressを用いたWebサイト制作</h4>
 				<p><time datetime="2020-07">2020年7月</time> 〜 <time datetime="2021-06">2021年6月</time></p>
@@ -355,7 +348,6 @@ import Layout from '@/layouts/Layout.astro';
 
 			<section>
 				<h3>アイエーアイ株式会社</h3>
-				<p><a href="https://www.iaiweb.co.jp/">https://www.iaiweb.co.jp/</a></p>
 				
 				<h4>WordPressを用いたWebサイト制作（業務委託）</h4>
 				<p><time datetime="2020-02">2020年2月</time> 〜 <time datetime="2021-07">2021年7月</time></p>
@@ -393,5 +385,15 @@ import Layout from '@/layouts/Layout.astro';
 	h6,
 	dt {
 		font-family: var(--font-family-mincho-bold);
+	}
+
+	p,
+	ul,
+	dd {
+		font-size: 15px;
+	}
+
+	ul ul {
+		margin: 0;
 	}
 </style>
