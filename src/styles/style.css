@@ -18,6 +18,9 @@
 	--font-family-gothic-regular: "MFW-PIshiiGothicStdN-R", sans-serif;
 	--font-family-gothic-bold: "MFW-PIshiiGothicStdN-B", sans-serif;
 
+	--font-family-mincho-regular: "MFW-PIshiiMinchoStdN-R", serif;
+	--font-family-mincho-bold: "MFW-PIshiiMinchoStdN-B", serif;
+
 	/* Default font family */
 	--font-family-sans: "MFW-PIshiiGothicStdN-R", sans-serif;
 
@@ -29,20 +32,20 @@
 }
 
 :root {
-    --sentence-color-DEFAULT: theme(colors.stone.600);
+	--sentence-color-DEFAULT: theme(colors.stone.600);
 }
 
 body {
-    margin-left: env(safe-area-inset-left);
-    margin-right: env(safe-area-inset-right);
-    line-height: var(--line-height-body);
-    font-family: var(--font-family-gothic-regular);
-    font-kerning: none;
-    hanging-punctuation: allow-end;
-    text-spacing-trim: trim-start;
-    text-autospace: normal;
-    line-break: normal;
-    hyphens: auto;
+	margin-left: env(safe-area-inset-left);
+	margin-right: env(safe-area-inset-right);
+	line-height: var(--line-height-body);
+	font-family: var(--font-family-gothic-regular);
+	font-kerning: none;
+	hanging-punctuation: allow-end;
+	text-spacing-trim: trim-start;
+	text-autospace: normal;
+	line-break: normal;
+	hyphens: auto;
 }
 
 h1,
@@ -54,8 +57,7 @@ h6,
 strong,
 b,
 dt {
-    font-family: var(--font-family-gothic-bold);
-    font-weight: normal;
+	font-family: var(--font-family-gothic-bold);
 }
 
 a,
