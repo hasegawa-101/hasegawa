@@ -9,6 +9,7 @@
     "@astrojs/sitemap": "^3.6.0",
     "@biomejs/biome": "2.4.14",
     "@tailwindcss/typography": "0.5.19",
+    "@tailwindcss/vite": "4.2.4",
     "@types/markdown-it": "14.1.2",
     "@types/sanitize-html": "2.16.1",
     "astro": "6.2.2",
