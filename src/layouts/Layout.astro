@@ -1,5 +1,6 @@
 ---
 import "@/styles/style.css";
+import { SITE_NAME } from "@/constants/site";
 
 interface Props {
 	title: string;
@@ -47,7 +48,7 @@ const {
 		<meta property="og:image" content="/favicon.svg" />
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Hayato Hasegawa" />
+		<meta property="og:site_name" content={SITE_NAME} />
 		<meta property="og:locale" content="ja_JP" />
 	</head>
 	<body
@@ -57,12 +58,12 @@ const {
 			!hideHeaderFooter &&
 				(isTop ? (
 					<header class="pbl-8 border-be flex justify-between items-center max-w-2xl mx-auto">
-						<h1 class="text-lg">Hayato Hasegawa</h1>
+						<h1 class="text-lg">{SITE_NAME}</h1>
 					</header>
 				) : (
 					<header class="pbl-8 border-be flex justify-between items-center max-w-2xl mx-auto">
 						<a class="text-lg" href="/" title="トップページに戻る">
-							Hayato Hasegawa
+							{SITE_NAME}
 						</a>
 					</header>
 				))
@@ -74,7 +75,7 @@ const {
 			!hideHeaderFooter && (
 				<footer class="sticky block-start-full pbl-8 border-bs max-w-2xl mx-auto">
 					<p lang="en">
-						<small>© Hayato Hasegawa</small>
+						<small>© {SITE_NAME}</small>
 					</p>
 				</footer>
 			)

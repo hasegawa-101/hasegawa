@@ -2,13 +2,14 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import { SITE_URL } from "./src/constants/site";
 
 export default defineConfig({
-  site: "https://hayatohasegawa.com",
+  site: SITE_URL,
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => page !== "https://hayatohasegawa.com/cv/",
+      filter: (page) => page !== `${SITE_URL}/cv/`,
     }),
   ],
   vite: {
