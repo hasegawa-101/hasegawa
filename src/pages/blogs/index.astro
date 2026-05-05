@@ -16,7 +16,7 @@ const sortedEntries = [...entries].sort((a, b) => {
 			{
 				sortedEntries.map((entry) => (
 					<li>
-						<a href={`/blogs/${entry.slug}`}>{entry.data.title}</a>
+						<a href={`/blogs/${entry.id}`}>{entry.data.title}</a>
 					</li>
 				))
 			}

@@ -1,6 +1,6 @@
 ---
-import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
 
 const entries = await getCollection("blog");
 
@@ -25,7 +25,7 @@ const latestEntries = [...entries]
 				{
 					latestEntries.map((entry) => (
 						<li>
-							<a href={`/blogs/${entry.slug}`}>{entry.data.title}</a>
+							<a href={`/blogs/${entry.id}`}>{entry.data.title}</a>
 						</li>
 					))
 				}
