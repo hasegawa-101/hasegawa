@@ -6,7 +6,7 @@
     "@astrojs/language-server": "2.16.7",
     "@astrojs/mdx": "5.0.4",
     "@astrojs/rss": "4.0.18",
-    "@astrojs/sitemap": "3.6.0",
+    "@astrojs/sitemap": "3.7.2",
     "@biomejs/biome": "2.4.14",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.2.4",
