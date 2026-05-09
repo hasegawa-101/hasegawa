@@ -23,7 +23,7 @@ OpenUIの[Link Area Delegation](https://open-ui.org/components/link-area-delegat
   <li class="card">
     <a href="#" class="card-link">
       <div class="card-image-wrapper">
-        <img src="hogehoge.jpg" alt="hoghoge">
+        <img src="hogehoge.jpg" alt="hogehoge">
       </div>
       <h2>Card Title</h2>
       <p>Card Descriptionが入ります。Card Descriptionが入ります。</p>
