@@ -19,7 +19,7 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Read Bun version
         id: bun-version
         run: echo "version=$(cat .bun-version)" >> "$GITHUB_OUTPUT"
