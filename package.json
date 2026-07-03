@@ -5,7 +5,7 @@
     "@astrojs/check": "0.9.9",
     "@astrojs/language-server": "2.16.10",
     "@astrojs/mdx": "5.0.6",
-    "@astrojs/rss": "4.0.18",
+    "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.3",
     "@biomejs/biome": "2.5.1",
     "@tailwindcss/typography": "0.5.20",
