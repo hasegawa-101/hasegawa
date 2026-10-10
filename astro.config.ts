@@ -6,6 +6,8 @@ import { SITE_URL } from "./src/constants/site";
 
 export default defineConfig({
   site: SITE_URL,
+  // Preserve the HTML whitespace behavior used before Astro 7.
+  compressHTML: true,
   integrations: [
     mdx(),
     sitemap({
@@ -13,6 +15,10 @@ export default defineConfig({
     }),
   ],
   vite: {
-    plugins: [tailwindcss() as any],
+    plugins: [tailwindcss()],
+    resolve: {
+      // Bundle Astro's cookie dependency in the prerender environment.
+      noExternal: ["cookie"],
+    },
   },
 });

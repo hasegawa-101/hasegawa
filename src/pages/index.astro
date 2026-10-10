@@ -15,22 +15,24 @@ const latestEntries = [...entries]
 			<h2 class="text-xl">Hayato Hasegawaについて</h2>
 			<div class="space-b-4">
 				<p>UIデザインに強い関心があるフロントエンドエンジニアをやってます。</p>
-				<a href="/about/" class="inline-block">Hayato Hasegawaについて</a>
+				<a href="/about/" class="inline-block">
+					Hayato Hasegawaについて
+				</a>
 			</div>
 		</section>
 		<div class="border-be"></div>
 		<section class="space-b-8">
 			<h2 class="text-xl">最近書いたブログ</h2>
 			<ol class="space-b-4">
-				{
-					latestEntries.map((entry) => (
-						<li>
-							<a href={`/blogs/${entry.id}`}>{entry.data.title}</a>
-						</li>
-					))
-				}
+				{latestEntries.map((entry) => (
+					<li>
+						<a href={`/blogs/${entry.id}`}>{entry.data.title}</a>
+					</li>
+				))}
 			</ol>
-			<a href="/blogs/" class="inline-block">すべてのブログ記事を見る</a>
+			<a href="/blogs/" class="inline-block">
+				すべてのブログ記事を見る
+			</a>
 		</section>
 		<div class="border-be"></div>
 		<section class="space-b-8">
