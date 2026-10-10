@@ -13,21 +13,26 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.conclusion == 'success')
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v6
-      - name: Read Bun version
-        id: bun-version
-        run: echo "version=$(cat .bun-version)" >> "$GITHUB_OUTPUT"
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
       - name: Install, build, and upload your site
         uses: withastro/action@v6
         with:
           node-version: 24
-          package-manager: bun@${{ steps.bun-version.outputs.version }}
 
   deploy:
     needs: build

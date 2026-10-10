@@ -1,7 +1,7 @@
 version: 2
 updates:
-  # Bun dependencies
-  - package-ecosystem: "bun"
+  # pnpm dependencies (uses the npm ecosystem)
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
@@ -10,11 +10,10 @@ updates:
     open-pull-requests-limit: 10
     labels:
       - "dependencies"
-      - "bun"
+      - "pnpm"
     commit-message:
       prefix: "chore(deps)"
       include: "scope"
-    versioning-strategy: "increase-if-necessary"
     # 特定のパッケージを無視
     ignore:
       - dependency-name: "vite"
@@ -36,6 +35,7 @@ updates:
           - "@biomejs/*"
           - "prettier*"
           - "typescript"
+          - "@typescript/*"
           - "vite"
       # TypeScript型定義をまとめる
       types:

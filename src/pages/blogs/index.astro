@@ -13,13 +13,11 @@ const sortedEntries = [...entries].sort((a, b) => {
 	<div class="space-b-8 pbl-12">
 		<h1 class="text-2xl">ブログ</h1>
 		<ul class="space-b-4 mbs-12">
-			{
-				sortedEntries.map((entry) => (
-					<li>
-						<a href={`/blogs/${entry.id}`}>{entry.data.title}</a>
-					</li>
-				))
-			}
+			{sortedEntries.map((entry) => (
+				<li>
+					<a href={`/blogs/${entry.id}`}>{entry.data.title}</a>
+				</li>
+			))}
 		</ul>
 	</div>
 </Layout>

@@ -19,13 +19,15 @@ const { Content } = await render(entry);
 		<div class="space-y-2">
 			<h1 class="text-2xl">{entry.data.title}</h1>
 			<p class="text-sm text-gray-600">
-{`公開日: ${formatDate(entry.data.date)}`}
+				{`公開日: ${formatDate(entry.data.date)}`}
 			</p>
 		</div>
-    <div class="border-be"></div>
+		<div class="border-be"></div>
 		<div class="prose dark:prose-invert">
 			<Content />
 		</div>
-		<a href="/blogs/" class="inline-block mbs-8">← ブログ一覧に戻る</a>
+		<a href="/blogs/" class="inline-block mbs-8">
+			← ブログ一覧に戻る
+		</a>
 	</div>
 </Layout>
