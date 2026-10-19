@@ -21,7 +21,7 @@
     "markdown-it": "15.0.2",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.1",
-    "sanitize-html": "2.18.0",
+    "sanitize-html": "2.18.1",
     "tailwindcss": "4.3.3",
     "typescript": "npm:@typescript/typescript6@6.0.2"
   },
