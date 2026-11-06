@@ -13,7 +13,7 @@
     "@astrojs/sitemap": "3.7.4",
     "@biomejs/biome": "2.6.4",
     "@tailwindcss/typography": "0.5.20",
-    "@tailwindcss/vite": "4.3.3",
+    "@tailwindcss/vite": "4.3.4",
     "@types/markdown-it": "14.2.0",
     "@types/sanitize-html": "2.16.2",
     "@typescript/native": "npm:typescript@7.0.2",
@@ -22,7 +22,7 @@
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.2",
     "sanitize-html": "2.18.1",
-    "tailwindcss": "4.3.3",
+    "tailwindcss": "4.3.4",
     "typescript": "npm:@typescript/typescript6@6.0.2"
   },
   "scripts": {
